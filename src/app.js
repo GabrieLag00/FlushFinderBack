@@ -24,8 +24,8 @@ app.use('/api/edificios', appRoutes); // http://localhost:4000/api/edificios/edi
 app.use('/api/banos', appRoutes); // http://localhost:4000/api/banos/edificios/{id}/banos/{id} (10 edificios, cada edificio tiene 14 banos, 7 hombres, 7 mujeres)
 app.use('/api/sos', appRoutes);
 // Servir archivo HTML en la ruta raíz ("/")
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html')); // Cambia 'public' por la carpeta donde está tu archivo HTML
-  });
+app.get('/test', (req, res) => {
+  res.status(200).send('Test endpoint working fine');
+});
 
 export default app;
